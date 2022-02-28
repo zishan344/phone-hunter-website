@@ -1,3 +1,7 @@
+// globle variable
+const notFound = document.getElementById("not-found");
+
+// load search value
 const loadSearchResult = () => {
   // console.log("Loading search results");
   const searchBox = document.getElementById("search-box");
@@ -10,6 +14,11 @@ const loadSearchResult = () => {
 };
 const displayData = (data) => {
   console.log(data);
+  if (data.length == 0) {
+    notFound.style.display = "block";
+  } else {
+    notFound.style.display = "none";
+  }
   const searchBody = document.getElementById("search-body");
   data.forEach((element) => {
     console.log(element);
