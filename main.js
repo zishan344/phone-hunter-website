@@ -9,6 +9,8 @@ const loadApi = () => {
   // console.log(searchText.value);
   if (searchBox.value == "") {
     notFound.style.display = "block";
+    const searchBody = document.getElementById("search-result");
+    searchBody.innerHTML = "";
   } else {
     fetch(
       `https://openapi.programming-hero.com/api/phones?search=${searchBox.value}`
@@ -28,7 +30,7 @@ const displayData = (data) => {
   }
   const searchBody = document.getElementById("search-result");
   searchBody.innerHTML = "";
-  data.forEach((element) => {
+  data.slice(0, 20).forEach((element) => {
     // console.log(element);
     const div = document.createElement("div");
     div.classList.add("col-sm-12");
