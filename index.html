@@ -17,15 +17,17 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- header section -->
     <header>
       <div class="text-center my-4">
         <h2 class="text-success text-opacity-75 py-2 fw-bold">Phone store</h2>
       </div>
       <section class="container">
-        <div class="row">
+        <div id="search-body" class="row">
           <div class="col-sm-12 col-md-10 mx-auto">
             <div class="input-group mb-3">
               <input
+                id="search-box"
                 type="text"
                 class="form-control"
                 placeholder="search your favorite phone"
@@ -33,17 +35,35 @@
                 aria-describedby="button-addon2"
               />
               <button
+                onclick="loadSearchResult()"
                 class="btn btn-outline-secondary"
                 type="button"
                 id="button-addon2"
               >
-                Button
+                search
               </button>
             </div>
           </div>
         </div>
       </section>
     </header>
+
+    <!-- main section -->
+    <main>
+      <!-- produ not found -->
+      <div
+      id="not-found"
+      class="not-fund px-5 py-5 bg-primary w-50 mx-auto text-center bg-opacity-25 rounded fw-bold"
+    >
+      <h4>Product is not available</h4>
+    </div>
+  </section>
+      
+      <!-- product body -->
+      <section class="container">
+        <div class="row" id="search-body"></div>
+      </section>
+    </main>
     <!-- bootstrap js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
