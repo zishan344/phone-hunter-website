@@ -46,7 +46,7 @@ const displayData = (data) => {
     div.classList.add("my-3");
     div.innerHTML = `
     <div class="shadow-lg rounded px-4 py-3">
-    <img src="${element.image}">
+    <img class="img-fluid" src="${element.image}">
     <h5>${element.phone_name}</h5>
     <h6>brand: ${element.brand}</h6>
     <div class="text-end">
