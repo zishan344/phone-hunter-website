@@ -7,9 +7,16 @@ const loadApi = () => {
   const searchBox = document.getElementById("loadApiData");
   const searchTextvalue = searchBox.value;
   // console.log(searchText.value);
-  fetch(`https://openapi.programming-hero.com/api/phones?search=${searchBox}`)
-    .then((response) => response.json())
-    .then((result) => displayData(result.data));
+  if (searchBox.value == "") {
+    notFound.style.display = "block";
+  } else {
+    fetch(
+      `https://openapi.programming-hero.com/api/phones?search=${searchBox.value}`
+    )
+      .then((response) => response.json())
+      .then((result) => displayData(result.data));
+  }
+
   searchBox.value = "";
 };
 const displayData = (data) => {
@@ -20,6 +27,7 @@ const displayData = (data) => {
     notFound.style.display = "none";
   }
   const searchBody = document.getElementById("search-result");
+  searchBody.innerHTML = "";
   data.forEach((element) => {
     // console.log(element);
     const div = document.createElement("div");
