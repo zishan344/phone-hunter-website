@@ -19,23 +19,23 @@
   <body>
     <!-- header section -->
     <header>
-      <div class="text-center my-4">
-        <h2 class="text-success text-opacity-75 py-2 fw-bold">Phone store</h2>
-      </div>
+      <h1 class="text-center text-succes opacity-50 fw-bold my-5">
+        phone store
+      </h1>
       <section class="container">
-        <div id="search-body" class="row">
-          <div class="col-sm-12 col-md-10 mx-auto">
+        <div class="row">
+          <div class="col-lg-10 col-12 col-md-10 mx-auto">
             <div class="input-group mb-3">
               <input
-                id="search-box"
+                id="loadApiData"
                 type="text"
                 class="form-control"
-                placeholder="search your favorite phone"
+                placeholder="search your favorite food"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
               />
               <button
-                onclick="loadSearchResult()"
+                onclick="loadApi()"
                 class="btn btn-outline-secondary"
                 type="button"
                 id="button-addon2"
@@ -50,18 +50,24 @@
 
     <!-- main section -->
     <main>
-      <!-- produ not found -->
-      <div
-      id="not-found"
-      class="not-fund px-5 py-5 bg-primary w-50 mx-auto text-center bg-opacity-25 rounded fw-bold"
-    >
-      <h4>Product is not available</h4>
-    </div>
-  </section>
-      
+      <!-- product detils -->
+      <section class="container my-5">
+        <div class="row justify-content-center" id="product-detils"></div>
+      </section>
+
       <!-- product body -->
       <section class="container">
-        <div class="row" id="search-body"></div>
+        <div class="row" id="search-result"></div>
+      </section>
+
+      <!-- product not fuound -->
+      <section class="pt-4">
+        <div
+          id="not-found"
+          class="not-fund px-5 py-5 bg-primary w-50 mx-auto text-center bg-opacity-25 rounded fw-bold"
+        >
+          <h4>Product is not available</h4>
+        </div>
       </section>
     </main>
     <!-- bootstrap js -->
