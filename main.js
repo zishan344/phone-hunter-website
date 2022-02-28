@@ -1,5 +1,11 @@
 // globle variable
 const notFound = document.getElementById("not-found");
+const displayLoadapi = () => {
+  fetch("https://openapi.programming-hero.com/api/phones")
+    .then((response) => response.json())
+    .then((result) => displayData(result.data));
+};
+displayLoadapi();
 
 // load search value
 const loadApi = () => {
@@ -30,7 +36,8 @@ const displayData = (data) => {
   }
   const searchBody = document.getElementById("search-result");
   searchBody.innerHTML = "";
-  data.slice(0, 20).forEach((element) => {
+  const slicing = data.slice(0, 20);
+  slicing.forEach((element) => {
     // console.log(element);
     const div = document.createElement("div");
     div.classList.add("col-sm-12");
