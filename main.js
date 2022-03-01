@@ -1,7 +1,7 @@
 // globle variable
 const notFound = document.getElementById("not-found");
 const displayLoadapi = () => {
-  fetch("https://openapi.programming-hero.com/api/phones")
+  fetch("https://openapi.programming-hero.com/api/phones?search=iphone")
     .then((response) => response.json())
     .then((result) => displayData(result.data));
 };
