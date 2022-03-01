@@ -1,5 +1,6 @@
 // globle variable
 const notFound = document.getElementById("not-found");
+const fullDetils = document.getElementById("product-detils");
 const displayLoadapi = () => {
   fetch("https://openapi.programming-hero.com/api/phones?search=iphone")
     .then((response) => response.json())
@@ -37,6 +38,7 @@ const displayData = (data) => {
   }
   const searchBody = document.getElementById("search-result");
   searchBody.innerHTML = "";
+  fullDetils.innerHTML = "";
   const slicing = data.slice(0, 20);
   slicing.forEach((element) => {
     // console.log(element);
@@ -71,8 +73,8 @@ const loadFullDetails = (data) => {
 
 // show detils in the display
 const displayFullDetils = (data) => {
-  console.log(data);
-  const fullDetils = document.getElementById("product-detils");
+  // console.log(data);
+
   fullDetils.innerHTML = "";
   const div = document.createElement("div");
   div.classList.add("col-md-12");
