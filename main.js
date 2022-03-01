@@ -7,7 +7,7 @@ const displayLoadapi = () => {
 };
 displayLoadapi();
 
-// load search value
+// load search value api
 const loadApi = () => {
   // console.log("Loading search results");
   const searchBox = document.getElementById("loadApiData");
@@ -27,6 +27,7 @@ const loadApi = () => {
 
   searchBox.value = "";
 };
+// showing data display
 const displayData = (data) => {
   // console.log(data);
   if (data.length == 0) {
@@ -59,6 +60,7 @@ const displayData = (data) => {
   });
 };
 
+// load detils api
 const loadFullDetails = (data) => {
   // console.log(data);
   const url = `https://openapi.programming-hero.com/api/phone/${data}`;
@@ -66,6 +68,8 @@ const loadFullDetails = (data) => {
     .then((response) => response.json())
     .then((result) => displayFullDetils(result.data));
 };
+
+// show detils in the display
 const displayFullDetils = (data) => {
   console.log(data);
   const fullDetils = document.getElementById("product-detils");
