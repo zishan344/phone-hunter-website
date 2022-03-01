@@ -18,6 +18,7 @@ const loadApi = () => {
     notFound.style.display = "block";
     const searchBody = document.getElementById("search-result");
     searchBody.innerHTML = "";
+    fullDetils.innerHTML = "";
   } else {
     fetch(
       `https://openapi.programming-hero.com/api/phones?search=${searchBox.value}`
