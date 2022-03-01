@@ -99,12 +99,24 @@ const displayFullDetils = (data) => {
 
   <div class="col-sm-4 col-md-3">
   <h4>Others Features<h4>
-  <h6><b>Bluetooth:</b>${data.others.Bluetooth}<h6>                    
-  <h6><b>GPS:</b>     ${data.others.GPS}<h6>
-  <h6><b>NFC:</b>     ${data.others.NFC}<h6>
-  <h6><b>Radio:</b>   ${data.others.Radio}<h6>
-  <h6><b>USB:</b>     ${data.others.USB}<h6>
-  <h6><b>WLAN:</b>    ${data.others.WLAN}<h6>
+  <h6><b>Bluetooth:</b>${
+    data.others?.Bluetooth ? data.others.Bluetooth : " not available"
+  }</h6>                    
+  <h6><b>GPS:</b>     ${
+    data.others?.GPS ? data.others.GPS : " not available"
+  }<h6>
+  <h6><b>NFC:</b>     ${
+    data.others?.NFC ? data.others.NFC : " not available"
+  }<h6>
+  <h6><b>Radio:</b>   ${
+    data.others?.Radio ? data.others.Radio : " not available"
+  }<h6>
+  <h6><b>USB:</b>     ${
+    data.others?.USB ? data.others.USB : " not available"
+  }<h6>
+  <h6><b>WLAN:</b>    ${
+    data.others?.WLAN ? data.others.WLAN : " not available"
+  }<h6>
    
   </div>
 
